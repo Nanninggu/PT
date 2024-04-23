@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>H2 User Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            background-color: white;
+            border: 1px solid black;
+        }
+        th, td {
+            color: black;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Username</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.username}"></td>
+        <td th:text="${user.email}"></td>
+    </tr>
+    </tbody>
+</table>
+<button id="userInfoButton">User Info</button>
+<script>
+document.getElementById("userInfoButton").addEventListener("click", function() {
+    window.location.href = "/api/v1/h2-user-table-mybatis";
+});
+</script>
+</body>
+</html>

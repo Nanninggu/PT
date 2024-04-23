@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.HexagonalArchitecture.mapper.MessageMapper">
+    <insert id="insertMessage" parameterType="com.example.HexagonalArchitecture.dto.MessageDTO">
+        INSERT INTO messages (timestamp, message)
+        VALUES (#{message.timestamp}, #{message.message})
+    </insert>
+</mapper>

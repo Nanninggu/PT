@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Users</title>
+  <meta http-equiv="refresh" content="5"> <!-- Page refreshes every 5 seconds -->
+</head>
+<body>
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Email</th>
+  </tr>
+  <tr th:each="user : ${users}">
+    <td th:text="${user.username}"></td>
+    <td th:text="${user.email}"></td>
+  </tr>
+</table>
+</body>
+</html>

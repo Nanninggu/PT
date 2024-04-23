@@ -1,0 +1,12 @@
+INSERT INTO users (username, email) VALUES ('user1', 'user1@example.com');
+INSERT INTO users (username, email) VALUES ('user3', 'user2@example.com');
+INSERT INTO users (username, email) VALUES ('user4', 'user3@example.com');
+INSERT INTO users (username, email) VALUES ('user5', 'user4@example.com');
+INSERT INTO users (username, email) VALUES ('user6', 'user5@example.com');
+INSERT INTO users (username, email) VALUES ('user7', 'user6@example.com');
+INSERT INTO users (username, email) VALUES ('user8', 'user7@example.com');
+INSERT INTO users (username, email) VALUES ('user9', 'user8@example.com');
+INSERT INTO users (username, email) VALUES ('user10', 'user9@example.com');
+INSERT INTO users (username, email) VALUES ('user11', 'user10@example.com');
+INSERT INTO users (username, email) VALUES ('user12', 'user11@example.com');
+INSERT INTO users (username, email) VALUES ('user13', 'user12@example.com');

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.HexagonalArchitecture.mapper.TestMapper">
+
+    <select id="getDBUserOfH2Mybatis" resultType="com.example.HexagonalArchitecture.dto.TestInfo">
+        SELECT username, email FROM users
+    </select>
+
+    <insert id="insertAutoRefreshTest" parameterType="com.example.HexagonalArchitecture.dto.TestInfo">
+        INSERT INTO users(username, email) VALUES(#{username}, #{email})
+    </insert>
+
+</mapper>
