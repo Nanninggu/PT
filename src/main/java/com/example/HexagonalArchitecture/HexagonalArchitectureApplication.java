@@ -7,11 +7,10 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan({"com.example.HexagonalArchitecture", "com.example.HexagonalArchitecture.Infrastructure"})
-@MapperScan("com.example.HexagonalArchitecture.mapper")
+@MapperScan({"com.example.HexagonalArchitecture.mapper","com.example.HexagonalArchitecture.outbox"})
 public class HexagonalArchitectureApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(HexagonalArchitectureApplication.class, args);
     }
-
 }

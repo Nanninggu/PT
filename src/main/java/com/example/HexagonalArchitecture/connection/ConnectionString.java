@@ -1,10 +1,10 @@
 package com.example.HexagonalArchitecture.connection;
 
-public class SQL {
+public class ConnectionString {
 
     // postgresql connection string
     public static String getConnectionString() {
-        return "jdbc:postgresql://localhost:5432/hexagonal-architecture";
+        return "jdbc:postgresql://localhost:5432/PracticeDB";
     }
 
     // h2 connection string

@@ -13,11 +13,12 @@ import java.sql.Statement;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-public class CSVTableCreator {
+public class TableCreator {
 
     /**
      * CSV 파일을 읽고 해당 CSV 파일의 헤더를
      * 읽어서 자동으로 테이블을 만들어주는 코드
+     *
      * @param conn
      * @param filePath
      */

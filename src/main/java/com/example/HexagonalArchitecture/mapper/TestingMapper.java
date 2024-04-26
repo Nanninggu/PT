@@ -1,13 +1,13 @@
 package com.example.HexagonalArchitecture.mapper;
-import com.example.HexagonalArchitecture.dto.TestInfo;
+import com.example.HexagonalArchitecture.dto.TestDTO;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface TestMapper {
+public interface TestingMapper {
 
-    List<TestInfo> getDBUserOfH2Mybatis();
+    List<TestDTO> getDBUserOfH2Mybatis();
 
     void insertAutoRefreshTest(String username, String email);
 }

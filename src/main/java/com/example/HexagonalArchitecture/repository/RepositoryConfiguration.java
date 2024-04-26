@@ -1,9 +1,9 @@
 package com.example.HexagonalArchitecture.repository;
 
-import com.example.HexagonalArchitecture.Infrastructure.H2UserRepository;
-import com.example.HexagonalArchitecture.Infrastructure.PostgresUserRepository;
-import com.example.HexagonalArchitecture.domain.H2DBRepository;
-import com.example.HexagonalArchitecture.domain.UserRepository;
+import com.example.HexagonalArchitecture.Infrastructure.H2RepositoryImpl;
+import com.example.HexagonalArchitecture.Infrastructure.PostgresRepositoryImpl;
+import com.example.HexagonalArchitecture.domain.H2Repository;
+import com.example.HexagonalArchitecture.domain.PostgresRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +15,7 @@ public class RepositoryConfiguration {
     @Bean
     @Profile("postgres")
     @Qualifier("postgres")
-    public UserRepository userRepositoryPostgresql(PostgresUserRepository postgresUserRepository) {
+    public PostgresRepository userRepositoryPostgresql(PostgresRepositoryImpl postgresUserRepository) {
         return postgresUserRepository;
     }
 
@@ -23,7 +23,8 @@ public class RepositoryConfiguration {
     @Bean
     @Profile("h2")
     @Qualifier("h2Repository")
-    public H2DBRepository testRepositoryH2(H2UserRepository h2UserRepository) {
-        return h2UserRepository;
+    public H2Repository testRepositoryH2(H2RepositoryImpl h2RepositoryImpl) {
+        return h2RepositoryImpl;
     }
+
 }

@@ -8,3 +8,12 @@ CREATE TABLE IF NOT EXISTS messages (
     timestamp VARCHAR(255) NOT NULL,
     message VARCHAR(255) NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS event (
+    id VARCHAR(255) NOT NULL,
+    type VARCHAR(255) NOT NULL,
+    aggregateId VARCHAR(255) NOT NULL,
+    aggregateType VARCHAR(255) NOT NULL,
+    payload VARCHAR(255) NOT NULL,
+    eventCreatedAt VARCHAR(255) NOT NULL
+);

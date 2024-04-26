@@ -1,7 +1,7 @@
 package com.example.HexagonalArchitecture.adapter.config;
 
-import com.example.HexagonalArchitecture.domain.UserRepository;
-import com.example.HexagonalArchitecture.Infrastructure.PostgresUserRepository;
+import com.example.HexagonalArchitecture.domain.PostgresRepository;
+import com.example.HexagonalArchitecture.Infrastructure.PostgresRepositoryImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean
-    public UserRepository userRepository() {
-        return new PostgresUserRepository();
+    public PostgresRepository userRepository() {
+        return new PostgresRepositoryImpl();
     }
 
 }

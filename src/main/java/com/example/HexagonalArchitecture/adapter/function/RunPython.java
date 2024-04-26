@@ -3,7 +3,7 @@ package com.example.HexagonalArchitecture.adapter.function;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class RunPythonScript {
+public class RunPython {
     public static void downloadFilesInKaggle() {
         try {
             ProcessBuilder processBuilder = new ProcessBuilder("python", "src/python/kaggle/main.py");

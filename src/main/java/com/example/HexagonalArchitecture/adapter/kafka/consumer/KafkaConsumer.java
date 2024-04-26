@@ -40,7 +40,7 @@ public class KafkaConsumer {
             messageDTO.setMessage(message);
             messageMapper.insertMessage(messageDTO);
 
-            System.out.println(String.format("Consumed message : %s", message));
+            System.out.printf("Consumed message : %s%n", message);
         } catch (Exception e) {
             System.err.println("Error in consume method: " + e.getMessage());
             e.printStackTrace();

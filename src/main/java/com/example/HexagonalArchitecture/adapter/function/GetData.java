@@ -1,6 +1,6 @@
 package com.example.HexagonalArchitecture.adapter.function;
 
-import com.example.HexagonalArchitecture.connection.DatabaseConnection;
+import com.example.HexagonalArchitecture.connection.DBConnectionConfig;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -10,7 +10,7 @@ import java.sql.Statement;
 public class GetData {
 
     public static void getDataFromAaa() throws SQLException {
-        Connection conn = DatabaseConnection.connect();
+        Connection conn = DBConnectionConfig.connect();
 
         try (Statement stmt = conn.createStatement()) {
             String sql = "SELECT id, password FROM public.aaa";

@@ -3,11 +3,10 @@ package com.example.HexagonalArchitecture.connection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
-public class DatabaseConnection {
+public class DBConnectionConfig {
 
     public static Connection connect() throws SQLException {
-        String url = SQL.getConnectionString();
+        String url = ConnectionString.getConnectionString();
         String username = "postgres";
         String password = "test1234";
 
@@ -19,7 +18,7 @@ public class DatabaseConnection {
     }
 
     public static Connection connectH2() throws SQLException {
-        String url = SQL.getH2ConnectionString();
+        String url = ConnectionString.getH2ConnectionString();
         String username = "sa";
         String password = "test1234";
 

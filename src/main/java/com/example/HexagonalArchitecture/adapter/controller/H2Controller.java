@@ -1,7 +1,7 @@
 package com.example.HexagonalArchitecture.adapter.controller;
 
-import com.example.HexagonalArchitecture.application.H2DBService;
-import com.example.HexagonalArchitecture.dto.TestInfo;
+import com.example.HexagonalArchitecture.application.H2Service;
+import com.example.HexagonalArchitecture.dto.TestDTO;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,21 +16,22 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1")
-public class H2DBController {
+public class H2Controller {
 
-    private final H2DBService h2DBService;
+    private final H2Service h2Service;
 
-    public H2DBController(H2DBService h2DBService) {
-        this.h2DBService = h2DBService;
+    public H2Controller(H2Service h2Service) {
+        this.h2Service = h2Service;
     }
 
     /**
      * H2 DB의 사용자 리스트를 조회
+     *
      * @return
      */
     @GetMapping("/h2-user-table")
     public ModelAndView h2_user_table() {
-        List<TestInfo> result = h2DBService.getDBUserOfH2();
+        List<TestDTO> result = h2Service.getDBUserOfH2();
         ModelAndView modelAndView = new ModelAndView("index");
         modelAndView.addObject("users", result);
         return modelAndView;
@@ -38,7 +39,7 @@ public class H2DBController {
 
     @GetMapping("/h2-user-table-mybatis")
     public ModelAndView h2_user_table_mybatis() {
-        List<TestInfo> result = h2DBService.getDBUserOfH2Mybatis();
+        List<TestDTO> result = h2Service.getDBUserOfH2Mybatis();
         ModelAndView modelAndView = new ModelAndView("user");
         modelAndView.addObject("users", result);
         return modelAndView;
@@ -46,7 +47,7 @@ public class H2DBController {
 
     @PostMapping("h2-insert-auto-refresh-test")
     public void h2_insert_auto_refresh_test(String username, String email) {
-        h2DBService.insertAutoRefreshTest(username, email);
+        h2Service.insertAutoRefreshTest(username, email);
     }
 
 }

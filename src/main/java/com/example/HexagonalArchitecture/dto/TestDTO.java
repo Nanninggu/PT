@@ -4,7 +4,7 @@ package com.example.HexagonalArchitecture.dto;
  * 이건 dto
  */
 
-public class TestInfo {
+public class TestDTO {
 
     private String username;
     private String email;

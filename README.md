@@ -18,3 +18,9 @@
 → 이건 했어 TestController 의 h2_user_table() 참고
 4. 그, 마음같아선 EKS 만들어서 테스트 하고 싶은데 돈 많이 드니까 로컬에서 K8S 띄워서 테스트 해보자.
 5. 추가로 작성할거 정리
+
+# 아키텍처는 아래와 같다.
+
+- Backend Architecture
+- Frontend Architecture
+- Application Architecture
